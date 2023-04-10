@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/NetflixSans-Regular.otf"),
+    url("/fonts/NetflixSans-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Light";
+  font-weight: 300;
+  font-style: normal;
+  src: url("/fonts/NetflixSans-Light.otf"),
+    url("/fonts/NetflixSans-Light.woff2");
+}
+
+@font-face {
+  font-family: "Medium";
+  font-weight: 500;
+  font-style: normal;
+  src: url("/fonts/NetflixSans-Medium.otf"),
+    url("/fonts/NetflixSans-Medium.woff2");
+}
+
+@font-face {
+  font-family: "Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/fonts/NetflixSans-Bold.otf"), url("/fonts/NetflixSans-Bold.woff2");
+}
+
+@layer base {
+  body {
+    @apply bg-[#141414] font-["Regular"];
+  }
+}
+
+::selection {
+  background: #b9090b;
+  color: white;
+}
+
+.films-item:hover .films-text {
+  transform: translateY(-208px);
+  opacity: 1;
+}
+
+.films-post:hover .films-text {
+  transform: translateY(-108px);
+  opacity: 1;
+}
+
+.container .swiper {
+  overflow: hidden;
+  border-radius: 14px;
+}
+.container .swiper-wrapper .container .swiper-slide img {
+  width: 1240px;
+  border-radius: 14px;
+}
+
+.container .swiper-button-prev,
+.container .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0.6;
+}
+
+.container .swiper-button-prev:hover,
+.container .swiper-button-next:hover {
+  opacity: 1;
+}
+
+.container .swiper-button-prev::after,
+.container .swiper-button-next::after {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+}
+
+.container .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: #ffffffad;
+  opacity: 0.5;
+  margin-right: 0 !important;
+}
+
+.container .swiper-pagination-bullet-active {
+  width: 6px;
+  height: 6px;
+  background: #ffffffad;
+  opacity: 1;
+  margin-right: 0 !important;
+}
