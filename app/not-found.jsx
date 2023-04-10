@@ -11,7 +11,7 @@ const NotFound = () => {
             404
           </div>
           <p className="text-2xl md:text-3xl text-white font-light leading-normal mb-8">
-            Sorry we couldn't find the page you're looking for
+            Sorry we couldn&lsquo;t find the page you&lsquo;re looking for
           </p>
           <Link
             href={"/home"}
@@ -22,7 +22,6 @@ const NotFound = () => {
         </div>
         <div className="w-full lg:flex lg:justify-end lg:w-1/2 mx-5 my-12">
           <Image
-            
             src="/imgs/404.png"
             width={570}
             height={480}

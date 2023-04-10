@@ -120,7 +120,7 @@ const SingleFilm = ({ params }) => {
         </div>
         <div className="z-10 text-white mt-4 pl-4">
           <h2 className="text-[26px] text-[#e5e5e5] font-['Medium']] mb-4">
-            Cartoon on Netflix
+            Popular on Netflix
           </h2>
           <SwiperPopular />
         </div>

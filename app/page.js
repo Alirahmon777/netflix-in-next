@@ -1,17 +1,15 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
 import React from "react";
-
+import usePageLogic from "./hooks/usePageLogic";
 const page = () => {
-  const pathname = usePathname();
-  const router = useRouter();
+  const { pathname, router } = usePageLogic();
 
   if (pathname == "/") {
     router.push("/home");
   }
 
-  return <div>page</div>;
+  return <div>To Home</div>;
 };
 
 export default page;
