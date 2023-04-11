@@ -1,8 +1,14 @@
-const getLocalStorage = (key) => JSON.parse(localStorage.getItem(key));
+const getLocalStorage = (key) =>
+  typeof window !== "undefined"
+    ? JSON.parse(window.localStorage.getItem(key))
+    : false;
 
 const setLocalStorage = (key, value) =>
-  localStorage.setItem(key, JSON.stringify(value));
+  typeof window !== "undefined"
+    ? window.localStorage.setItem(key, JSON.stringify(value))
+    : false;
 
-const removeLocalStorage = (key) => localStorage.removeItem(key);
+const removeLocalStorage = (key) =>
+  typeof window !== "undefined" ? window.localStorage.removeItem(key) : false;
 
 export { getLocalStorage, setLocalStorage, removeLocalStorage };
