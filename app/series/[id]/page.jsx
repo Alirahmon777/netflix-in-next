@@ -108,7 +108,7 @@ export default function Page({ params }) {
               <p className="z-10 text-lg">{overview}</p>
               <div className="flex gap-4">
                 <Link
-                  href={"trailer"}
+                  href={`/series/${id}/trailer`}
                   className="py-[15px] px-[30px] bg-[#E50914] items-center text-[22px] font-['Bold'] gap-5 rounded-[4px] flex text-white"
                 >
                   <Image

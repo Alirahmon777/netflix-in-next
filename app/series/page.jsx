@@ -25,7 +25,7 @@ const Series = () => {
               >
                 <Link href={`/series/${id}`}>
                   <Image
-                    className="hover:scale-110 transition-all h-full hover:opacity-30"
+                    className="hover:scale-105 transition-all h-auto hover:opacity-30"
                     width={280}
                     height={300}
                     src={`https://image.tmdb.org/t/p/original${
@@ -33,7 +33,7 @@ const Series = () => {
                     }`}
                     alt={name}
                   />
-                  <p className="z-10 text-3xl text-white absolute w-full transition-all bottom-0 films-text opacity-0 pointer-events-none text-center">
+                  <p className="z-10 text-2xl text-white absolute w-full transition-all bottom-0 films-text opacity-0 pointer-events-none text-center">
                     {name}
                   </p>
                 </Link>

@@ -1,10 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import { API_KEY, api } from "./api";
+import { LoadingContext } from "../context/loadingContext";
 
-const Pagination = ({ dataType, dataSetState, itemsPerPage }) => {
+const Pagination = ({ dataType, dataSetState, itemsPerPage, query }) => {
   const [pageCount, setPageCount] = useState(0);
+  const { setLoading } = useContext(LoadingContext);
 
   useEffect(() => {
     setPageCount(itemsPerPage);
@@ -15,12 +17,14 @@ const Pagination = ({ dataType, dataSetState, itemsPerPage }) => {
 
     api()
       .get(
-        `${dataType}?api_key=${API_KEY}&page=${currentPage}
+        `${dataType}?api_key=${API_KEY}&page=${currentPage}${query ? query : ""}
         `
       )
       .then(({ data }) => {
+        setLoading(true);
         dataSetState(data);
-      });
+      })
+      .finally(() => setLoading(false));
   };
 
   return (

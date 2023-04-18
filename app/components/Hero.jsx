@@ -27,10 +27,21 @@ const Hero = () => {
         ) => (
           <SwiperSlide key={i}>
             <section
-              className="w-full h-[1000px] bg-cover"
-              style={{
-                backgroundImage: `url(https://image.tmdb.org/t/p/original${backdrop_path})`,
-              }}
+              className={
+                backdrop_path
+                  ? "w-full !h-[1000px] bg-cover"
+                  : "w-full !h-[1000px] animate-pulse"
+              }
+              style={
+                backdrop_path
+                  ? {
+                      backgroundImage: `url(https://image.tmdb.org/t/p/original${backdrop_path})`,
+                    }
+                  : {
+                      background: "#141414",
+                      height: "1000px",
+                    }
+              }
             >
               <div className="w-full h-full bg-[rgba(0,0,0,0.4)] pb-5 shadow-inner">
                 <div className="container">
@@ -52,6 +63,7 @@ const Hero = () => {
                         <Image
                           width={100}
                           height={100}
+                          className="!w-auto !h-auto"
                           title={original_title + "play"}
                           src={"/svgs/play.svg"}
                           alt="play icon"
@@ -65,6 +77,7 @@ const Hero = () => {
                         <Image
                           width={100}
                           height={100}
+                          className="!w-auto !h-auto"
                           src={"svgs/detail.svg"}
                           alt="detail icon"
                         />

@@ -24,13 +24,13 @@ const Films = () => {
               >
                 <Link href={`/films-cartoons/${id}`}>
                   <Image
-                    className="hover:scale-105 transition-all hover:opacity-30"
+                    className="hover:scale-105 h-auto transition-all hover:opacity-30"
                     width={280}
                     height={300}
                     src={`https://image.tmdb.org/t/p/original${poster_path}`}
                     alt={original_title}
                   />
-                  <p className="z-10 text-3xl absolute w-full transition-all bottom-0 films-text opacity-0 pointer-events-none text-center">
+                  <p className="z-10 text-2xl absolute w-full transition-all bottom-0 films-text opacity-0 pointer-events-none text-center">
                     {title}
                   </p>
                 </Link>
@@ -45,7 +45,9 @@ const Films = () => {
           itemsPerPage={popular?.total_pages}
         />
 
-        <h2 className="text-[26px] font-['Medium']] mb-2 mt-5">Recommendations</h2>
+        <h2 className="text-[26px] font-['Medium']] mb-2 mt-5">
+          Recommendations
+        </h2>
         <SwiperRecomendition />
 
         <h2 className="text-[26px] font-['Medium']] mb-2 mt-5">Cartoon</h2>

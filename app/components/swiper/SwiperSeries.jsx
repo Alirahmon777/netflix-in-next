@@ -4,10 +4,10 @@ import { A11y, Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import Image from "next/image";
-import { RecomContext } from "../../context/recomContext";
+import { SeriesContext } from "../../context/SeriesContext";
 
-const SwiperRecomendition = () => {
-  const { recom } = useContext(RecomContext);
+const SwiperSeries = () => {
+  const { series } = useContext(SeriesContext);
 
   return (
     <Swiper
@@ -15,12 +15,12 @@ const SwiperRecomendition = () => {
       spaceBetween={50}
       slidesPerView={6}
       slidesPerGroup={1}
-      speed={1200}
-      autoplay={{ delay: 25000, disableOnInteraction: false }}
+      speed={1100}
+      autoplay={{ delay: 27000, disableOnInteraction: false }}
       navigation
       loop
     >
-      {recom.results?.map(({ original_title, title, poster_path, id }, i) => {
+      {series.results?.map(({ original_name, name, poster_path, id }, i) => {
         return (
           <SwiperSlide key={i}>
             <div className="relative transition-all films-post cursor-pointer rounded-lg overflow-hidden">
@@ -31,10 +31,10 @@ const SwiperRecomendition = () => {
                   sizes="(max-width: 1250px) 100%, (max-height: 1250px) 100%"
                   className="rounded-lg transition-all hover:opacity-30 w-full h-full"
                   src={`https://image.tmdb.org/t/p/original${poster_path}`}
-                  alt={original_title}
+                  alt={original_name}
                 />
                 <p className="z-10 text-white text-2xl absolute w-full transition-all bottom-0 films-text opacity-0 pointer-events-none text-center">
-                  {title}
+                  {name}
                 </p>
               </Link>
             </div>
@@ -45,4 +45,4 @@ const SwiperRecomendition = () => {
   );
 };
 
-export default SwiperRecomendition;
+export default SwiperSeries;

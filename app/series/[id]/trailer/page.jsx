@@ -18,7 +18,7 @@ const Trailer = ({ params }) => {
   );
   useEffect(() => {
     api()
-      .get(`discovertv/${id}/videos?api_key=${API_KEY}`, {
+      .get(`tv/${id}/videos?api_key=${API_KEY}`, {
         cache: "force-cache",
       })
       .then(({ data: { results } }) => setTrailer(results));

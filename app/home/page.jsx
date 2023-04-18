@@ -5,6 +5,7 @@ import {
   SwiperPopular,
   SwiperRecomendition,
 } from "../components";
+import SwiperSeries from "../components/swiper/SwiperSeries";
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
       <div className="container">
         <div className="z-10 text-white mt-4 pl-4">
           <h2 className="text-[26px] text-[#e5e5e5] font-['Medium']] mb-4">
-            Popular on Netflix
+            Populars on Netflix
           </h2>
           <SwiperPopular />
         </div>
@@ -25,9 +26,15 @@ const Home = () => {
         </div>
         <div className="z-10 text-white mt-4 pl-4">
           <h2 className="text-[26px] text-[#e5e5e5] font-['Medium']] mb-4">
-            Cartoon on Netflix
+            Cartoons on Netflix
           </h2>
           <SwiperCartoon />
+        </div>
+        <div className="z-10 text-white mt-4 pl-4">
+          <h2 className="text-[26px] text-[#e5e5e5] font-['Medium']] mb-4">
+            Series on Netflix
+          </h2>
+          <SwiperSeries />
         </div>
       </div>
     </>

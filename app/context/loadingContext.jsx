@@ -1,28 +1,21 @@
-"use client"
-import React, { createContext, useEffect, useState } from "react";
-import { API_KEY, api } from "../utils/api";
+"use client";
+import React, { createContext, useState } from "react";
 
-export const PopularContext = createContext();
+export const LoadingContext = createContext();
 
-const PopularContextProvider = ({ children }) => {
-  const [popular, setPopular] = useState([]);
-
-  useEffect(() => {
-    api()
-      .get(`movie/popular?api_key=${API_KEY}`)
-      .then(({ data }) => setPopular(data));
-  }, []);
+const LoadingContextProvider = ({ children }) => {
+  const [loading, setLoading] = useState(false);
 
   return (
-    <PopularContext.Provider
+    <LoadingContext.Provider
       value={{
-        popular,
-        setPopular,
+        loading,
+        setLoading,
       }}
     >
       {children}
-    </PopularContext.Provider>
+    </LoadingContext.Provider>
   );
 };
 
-export default PopularContextProvider;
+export default LoadingContextProvider;

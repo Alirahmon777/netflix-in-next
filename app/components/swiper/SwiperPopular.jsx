@@ -34,7 +34,7 @@ const SwiperPopular = () => {
                     src={`https://image.tmdb.org/t/p/original${poster_path}`}
                     alt={original_title}
                   />
-                  <p className="z-10 text-white text-3xl absolute w-full transition-all bottom-0 films-text opacity-0 pointer-events-none text-center">
+                  <p className="z-10 text-white text-2xl absolute w-full transition-all bottom-0 films-text opacity-0 pointer-events-none text-center">
                     {title}
                   </p>
                 </Link>
