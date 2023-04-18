@@ -22,12 +22,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <LoadingContextProvider>
-      <PopularContextProvider>
-        <RecomContextProvider>
-          <CartoonContextProvider>
-            <AuthContextProvider>
-              <SeriesContextProvider>
+    <AuthContextProvider>
+      <LoadingContextProvider>
+        <PopularContextProvider>
+          <RecomContextProvider>
+            <SeriesContextProvider>
+              <CartoonContextProvider>
                 <html lang="en">
                   <body>
                     <Header />
@@ -35,11 +35,11 @@ export default function RootLayout({ children }) {
                     <Footer />
                   </body>
                 </html>
-              </SeriesContextProvider>
-            </AuthContextProvider>
-          </CartoonContextProvider>
-        </RecomContextProvider>
-      </PopularContextProvider>
-    </LoadingContextProvider>
+              </CartoonContextProvider>
+            </SeriesContextProvider>
+          </RecomContextProvider>
+        </PopularContextProvider>
+      </LoadingContextProvider>
+    </AuthContextProvider>
   );
 }

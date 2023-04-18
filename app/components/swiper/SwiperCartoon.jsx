@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, Navigation } from "swiper";
 import { CartoonContext } from "../../context/CartoonContext";
 export const metadata = {
-  title: "Netflix Узбекистан — Carton",
+  title: "Netflix Узбекистан — Cartoon",
 };
 const SwiperCartoon = () => {
   const { cartoon } = useContext(CartoonContext);

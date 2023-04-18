@@ -4,9 +4,9 @@ import { SwiperCartoon, SwiperRecomendition } from "../components";
 import Pagination from "../utils/Pagination";
 import Link from "next/link";
 import Image from "next/image";
-import { CartoonContext } from "../context/CartoonContext";
 import { LoadingContext } from "../context/loadingContext";
 import imageLoader from "../utils/imageLoader";
+import { CartoonContext } from "../context/CartoonContext";
 
 const Cartoon = () => {
   const { cartoon, setCartoon } = useContext(CartoonContext);
